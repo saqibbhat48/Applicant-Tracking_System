@@ -51,10 +51,10 @@ const LoginForm = () => {
       <div className='flex justify-end p-4'><button className='text-white font-semibold bg-violet-600 px-2 py-1 rounded-md hover:bg-violet-800 duration-300 ease-linear' onClick={()=>navigate('/')}>Home</button></div>
       <div className='p-4 text-white text-lg bg-gray-600'>
         <h2 className='text-3xl font-bold'>Dummy Users</h2>
-       <p><span className='text- font-semibold'>Employer ⮕ </span>email: 'employer@example.com', password: 'password', role: 'employer' ⮕ will post jobs</p> 
+       <p><span className='text-xl font-semibold'>Employer ⮕ </span>email: 'employer@example.com', password: 'password', role: 'employer' ⮕ will post jobs</p> 
         <p><span className='text-xl font-semibold'>Coordernator ⮕ </span> email: 'coordinator@example.com', password: 'password', role: 'coordinator ⮕ will approve jobs'</p>
-       <p><span className='text- font-semibold'>Candidate ⮕ </span>email: 'candidate@example.com', password: 'password', role: 'candidate ⮕ will apply for jobs'</p>
-       <p><span className='text- font-semibold'>Recruiter ⮕ </span>email: 'recruiter@example.com', password: 'password', role: 'recruiter ⮕ will shortlist candidates'</p> 
+       <p><span className='text-xl font-semibold'>Candidate ⮕ </span>email: 'candidate@example.com', password: 'password', role: 'candidate ⮕ will apply for jobs'</p>
+       <p><span className='text-xl font-semibold'>Recruiter ⮕ </span>email: 'recruiter@example.com', password: 'password', role: 'recruiter ⮕ will shortlist candidates'</p> 
       </div>
     <div className="flex mt-10 justify-center ">
       <form className="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
