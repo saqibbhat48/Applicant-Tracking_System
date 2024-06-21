@@ -26,7 +26,7 @@ const Signup = () => {
 
     // Save updated users array back to local storage
     localStorage.setItem('users', JSON.stringify(users));
-
+    alert('account created successfully')
     // Redirect to login page
     navigate('/login');
   };
