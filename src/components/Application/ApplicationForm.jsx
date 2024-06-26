@@ -51,7 +51,7 @@ function ApplicationForm() {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md">
+    <div className="bg-white p-8 m-8 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6">Apply for Job</h2>
       <form onSubmit={handleSubmit}>
         <input

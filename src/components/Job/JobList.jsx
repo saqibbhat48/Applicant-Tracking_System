@@ -28,8 +28,8 @@ const JobList = () => {
   }
 
   return (
-    <div className="p-6 bg-gray-300 min-h-screen">
-      <div className="bg-white p-8 rounded-lg shadow-md">
+    <div className="p-6 min-h-screen">
+      <div className="bg-gray-300 p-8 rounded-lg shadow-md">
         <div className='flex justify-end'><button className='py-1 px-2 bg-slate-700 text-white rounded-md hover:bg-slate-900 duration-300 ease-linear font-semibold' onClick={handleLogout}>Logout</button></div>
         <h1 className="text-3xl font-bold mb-6">Job Listings</h1>
         {jobs.length === 0 ? (

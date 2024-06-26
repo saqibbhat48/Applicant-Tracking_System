@@ -9,6 +9,32 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const dummyUsers = [
+    {
+      role: 'Employer',
+      email: 'employer@example.com',
+      password: 'password',
+      description: 'will post jobs'
+    },
+    {
+      role: 'Coordinator',
+      email: 'coordinator@example.com',
+      password: 'password',
+      description: 'will approve jobs'
+    },
+    {
+      role: 'Candidate',
+      email: 'candidate@example.com',
+      password: 'password',
+      description: 'will apply for jobs'
+    },
+    {
+      role: 'Recruiter',
+      email: 'recruiter@example.com',
+      password: 'password',
+      description: 'will shortlist candidates'
+    }
+  ];
 
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem('users')) || [];
@@ -49,13 +75,29 @@ const LoginForm = () => {
   return (
     <div>
       <div className='flex justify-end p-4'><button className='text-white font-semibold bg-violet-600 px-2 py-1 rounded-md hover:bg-violet-800 duration-300 ease-linear' onClick={()=>navigate('/')}>Home</button></div>
-      <div className='p-4 text-white text-lg bg-gray-600'>
-        <h2 className='text-3xl font-bold'>Dummy Users</h2>
-       <p><span className='text-xl font-semibold'>Employer ⮕ </span>email: 'employer@example.com', password: 'password', role: 'employer' ⮕ will post jobs</p> 
-        <p><span className='text-xl font-semibold'>Coordernator ⮕ </span> email: 'coordinator@example.com', password: 'password', role: 'coordinator ⮕ will approve jobs'</p>
-       <p><span className='text-xl font-semibold'>Candidate ⮕ </span>email: 'candidate@example.com', password: 'password', role: 'candidate ⮕ will apply for jobs'</p>
-       <p><span className='text-xl font-semibold'>Recruiter ⮕ </span>email: 'recruiter@example.com', password: 'password', role: 'recruiter ⮕ will shortlist candidates'</p> 
-      </div>
+      <div className="overflow-x-auto px-4">
+      <h2 className="text-3xl text-white font-bold">Dummy Users</h2>
+      <table className="min-w-full table-auto">
+        <thead>
+          <tr className="bg-gray-200">
+            <th className="px-4 py-2">Role</th>
+            <th className="px-4 py-2">Email</th>
+            <th className="px-4 py-2">Password</th>
+            <th className="px-4 py-2">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {dummyUsers.map((user, index) => (
+            <tr key={index} className="bg-gray-100 border-b hover:bg-gray-100">
+              <td className="border px-4 py-2">{user.role}</td>
+              <td className="border px-4 py-2">{user.email}</td>
+              <td className="border px-4 py-2">{user.password}</td>
+              <td className="border px-4 py-2">{user.description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
     <div className="flex mt-10 justify-center ">
       <form className="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -102,3 +144,5 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+//

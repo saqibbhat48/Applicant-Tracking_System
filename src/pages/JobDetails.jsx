@@ -25,7 +25,7 @@ const JobDetails = () => {
   }
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className="p-6 min-h-screen">
       <div className="bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-3xl font-bold mb-6">{job.title}</h1>
         <p className="mb-4"><strong>Location:</strong> {job.location}</p>
